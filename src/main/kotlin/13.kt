@@ -12,3 +12,4 @@ fun calculaSalario (s: Double):String {
     return "O novo salário é de: R$$salarioNovo"
 }
 
+// O novo salário é de: R$1437.5
