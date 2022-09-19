@@ -26,4 +26,5 @@ fun transformaMedidas(n: Double): String{
     return "$quilometro Km\n $hectometro Hm\n $decametro Dam\n $decimetro dm\n $centimetro cm\n $milimetro mm"
 }
 
+
 //Dúvida: Existe outra forma de retornar esses valor? ( mesma dúvida da questão 06)
