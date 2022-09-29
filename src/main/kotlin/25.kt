@@ -19,12 +19,8 @@ fun formaTriangulo(): String{
 
     if((lado1 > lado2 + lado3) || (lado2 > lado1 + lado3) || (lado3 > lado1 + lado2)){
         return "Não forma um triângulo"
-    } else if ((lado1 == lado2) && (lado2 == lado3)){
-        return "É um triângulo equilátero"
-    } else if ((lado1 == lado2) || (lado2 == lado3) || (lado3 == lado1)){
-        return "É um triângulo Isósceles"
     } else {
-        return "É um triângulo Escaleno"
+        return "Forma um triângulo"
     }
 
 }
