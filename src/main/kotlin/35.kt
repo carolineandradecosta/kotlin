@@ -13,10 +13,9 @@
 //- Acima de 200Km percorridos: R$0,25 por Km
 
 fun main(){
-    println(calculaAluguel("luxo", 3, 150.0))
+    println(calculaAluguel("popular", 3, 210.0))
 }
 
-// resolução utilizando a função "when"
 fun calculaAluguel (tipoCarro: String, diasAluguel: Int, quilometros: Double): String {
 
     // valor das diárias
@@ -52,10 +51,6 @@ fun calculaAluguel (tipoCarro: String, diasAluguel: Int, quilometros: Double): S
     }
 }
 
-// resolução utilizando apenas o "if"
 
-fun calculaAluguel2(){
-
-}
 
 
