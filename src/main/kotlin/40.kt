@@ -13,3 +13,5 @@ fun contagem3(){
     }
     print("Acabou!")
 }
+
+//0 3 6 9 12 15 18 Acabou!
