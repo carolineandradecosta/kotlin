@@ -8,37 +8,29 @@ d) A média de idade dos homens
 e) Quantas mulheres tem mais de 20 anos*/
 
 fun main(){
-//    val idades = listOf(85, 50, 4, 25, 30)
-//    val sexos = listOf("feminino", "masculino", "masculino", "feminino", "feminino")
     classificaIdadeSexo()
 }
 
-// solução incompleta
-
 fun classificaIdadeSexo(){
-//    println(sexo.filter { it == "masculino" }.size)
-//    println(sexo.filter { it == "feminino" }.size)
-//    println(idade.average())
 
     var contador: Int = 0
+
     val sexos: MutableList<String> = mutableListOf<String>()
-    //val sexos: Array<String>  = arrayOf()
     val idadesMulheres = mutableListOf<Int>()
     val idadesHomens = mutableListOf<Int>()
-
+    val idadeTodas = mutableListOf<Int>()
 
     while (contador <= 2){
         println("Informe o seu sexo: ")
         val sexo:String = readLine()!!.toString()
         println("Informe a sua idade: ")
         val idade = readLine()!!.toInt()
+        idadeTodas.add(idade)
 
         when(sexo){
             "feminino" -> {
-
                 idadesMulheres.add(idade)
                 sexos.add(sexo)
-
             }
             "masculino" -> {
                 idadesHomens.add(idade)
@@ -47,29 +39,23 @@ fun classificaIdadeSexo(){
         }
     contador += 1
     }
+    println("Idades mulheres: $idadesMulheres")
+    println("Idades homens: $idadesHomens")
+    println("Lista de sexos: $sexos")
+    println("Todas as idades: $idadeTodas")
+    println()
 
+    val qtdHomens = sexos.filter { it == "masculino" }.size
+    println("Quantidade de homens cadastrados $qtdHomens")
+    val qtdMulheres = sexos.filter { it == "feminino" }.size
+    println("Quantidade de mulheres cadastradas $qtdMulheres")
 
+    val mediaGrupo = idadeTodas.average()
+    println("Média de idade do grupo: $mediaGrupo")
 
-//    for (i in 0 .. 2 ){
-//
-//        println("Informe o seu sexo: ")
-//        val sexo:String = readLine()!!.toString()
-//
-//        when (sexo){
-//            "feminino" -> {
-//                println("Informe a sua idade: ")
-//                idadesMulheres[i]= readLine()!!.toInt()
-//                //sexos[i] = sexo
-//            }
-//            "masculino" ->{
-//                println("Informe a sua idade: ")
-//                idadesHomens[i] = readLine()!!.toInt()
-//                //sexos[i] = sexo
-//            }
-//        }
-//
-//    }
-    println(idadesMulheres)
-    println(idadesHomens)
-    println(sexos)
+    val mediaHomens = idadesHomens.average()
+    println("Média de idade dos homens: $mediaHomens")
+
+    val mulheresMais20 = idadesMulheres.filter { it > 20 }.size
+    println("Quantidade de mulheres com mais de 20 anos: $mulheresMais20")
 }
