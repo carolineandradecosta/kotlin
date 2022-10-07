@@ -21,27 +21,27 @@ fun classificaIdadeSexo(){
 //    println(idade.average())
 
     var contador: Int = 0
-    //val sexos: MutableList<String> = mutableListOf<String>()
-    val sexos: Array<String>  = arrayOf()
-    val idadesMulheres: IntArray = IntArray(3)
-    val idadesHomens:  IntArray = IntArray(3)
+    val sexos: MutableList<String> = mutableListOf<String>()
+    //val sexos: Array<String>  = arrayOf()
+    val idadesMulheres = mutableListOf<Int>()
+    val idadesHomens = mutableListOf<Int>()
 
 
     while (contador <= 2){
         println("Informe o seu sexo: ")
         val sexo:String = readLine()!!.toString()
-        //sexos[contador] = sexo
+        println("Informe a sua idade: ")
+        val idade = readLine()!!.toInt()
 
         when(sexo){
             "feminino" -> {
-                println("Informe a sua idade: ")
-                idadesMulheres[contador] = readLine()!!.toInt()
-                //sexos[contador] = sexo
+
+                idadesMulheres.add(idade)
+                sexos.add(sexo)
             }
             "masculino" -> {
-                println("Informe a sua idade: ")
-                idadesHomens[contador] = readLine()!!.toInt()
-                //sexos[contador] = sexo
+                idadesHomens.add(idade)
+                sexos.add(sexo)
             }
         }
     contador += 1
@@ -68,7 +68,7 @@ fun classificaIdadeSexo(){
 //        }
 //
 //    }
-    println(idadesMulheres.contentToString())
-    println(idadesHomens.contentToString())
-    //println(sexos.contentToString())
+    println(idadesMulheres)
+    println(idadesHomens)
+    println(sexos)
 }
