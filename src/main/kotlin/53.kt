@@ -21,7 +21,8 @@ fun classificaIdadeSexo(){
 //    println(idade.average())
 
     var contador: Int = 0
-    val sexos: List<String>  = listOf()
+    //val sexos: MutableList<String> = mutableListOf<String>()
+    val sexos: Array<String>  = arrayOf()
     val idadesMulheres: IntArray = IntArray(3)
     val idadesHomens:  IntArray = IntArray(3)
 
