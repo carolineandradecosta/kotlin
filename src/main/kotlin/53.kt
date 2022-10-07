@@ -38,6 +38,7 @@ fun classificaIdadeSexo(){
 
                 idadesMulheres.add(idade)
                 sexos.add(sexo)
+
             }
             "masculino" -> {
                 idadesHomens.add(idade)
