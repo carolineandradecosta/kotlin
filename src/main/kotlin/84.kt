@@ -7,7 +7,7 @@ contendo apenas os dados das pessoas menores de idade.*/
 fun main(){
     val nomes = listOf<String>("Caroline", "Miguel", "Celiane", "Mel")
     val idades = listOf<Int>(30, 5, 53, 17)
-    println(apenasMenores18(nomes, idades))
+    apenasMenores18(nomes, idades)
 }
 
 fun apenasMenores18(nome: List<String>, idade: List<Int>){
