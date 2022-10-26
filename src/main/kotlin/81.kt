@@ -1,3 +1,4 @@
+import java.math.BigDecimal
 import java.math.RoundingMode
 
 /*
@@ -9,8 +10,13 @@ c) Qual foi a maior idade digitada (podem haver repetições)
 d) Em que posições digitamos a maior idade*/
 
 fun main(){
-    geraIdades()
-
+    //geraIdades()
+    val listaIdades = geraIdades2()
+    println(listaIdades)
+    println(calculaMediaIdades2(listaIdades))
+    posicaoComMais25Anos(listaIdades)
+    println(maiorIdade2(listaIdades))
+    println(posicaoDaMaiorIdade(listaIdades))
 }
 
 fun geraIdades(){
@@ -45,4 +51,43 @@ fun geraIdades(){
         }
     }
 
+}
+
+// Outra forma de resolver:
+fun geraIdades2(): MutableList<Int> {
+    val idades = mutableListOf<Int>()
+    val intervaloIdades = 1..100
+
+    for (i in 0..7) {
+        val aleatorio = intervaloIdades.random()
+        idades.add(aleatorio)
+    }
+    return idades
+}
+
+fun calculaMediaIdades2(idade: MutableList<Int>): BigDecimal{
+    return idade.average().toBigDecimal().setScale(2, RoundingMode.UP)
+}
+
+fun posicaoComMais25Anos(idade: MutableList<Int>){
+    for(i in idade.indices){
+        if(idade[i] > 25){
+            print("$i ")
+        }
+    }
+    println()
+
+    //println(idade.filterIndexed { index, i -> (i > 25) }) // buscar outra solução
+}
+
+fun maiorIdade2(idade: MutableList<Int>): Int{
+    return idade.max()
+}
+
+fun posicaoDaMaiorIdade(idade: MutableList<Int>){
+    for(i in idade.indices){
+        if(idade[i] == idade.max()){
+            print("$i ")
+        }
+    }
 }

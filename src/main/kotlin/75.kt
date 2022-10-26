@@ -9,7 +9,6 @@ elementos da sequência de Fibonacci:
 fun main(){
     sequenciaFibonacci2()
 }
-
 fun sequenciaFibonacci2(){
     val f1 = 1
     val f2 = f1
