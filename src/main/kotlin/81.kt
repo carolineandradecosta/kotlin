@@ -75,7 +75,9 @@ fun posicaoComMais25Anos(idade: MutableList<Int>){
             print("$i ")
         }
     }
-    println()
+    var resultado = idade.filterIndexed { index, i -> i > 25 }.stream()
+
+    println(resultado)
 
     //println(idade.filterIndexed { index, i -> (i > 25) }) // buscar outra solução
 }
